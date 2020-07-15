@@ -1,0 +1,90 @@
+<header class="h-100">
+  <mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark indigo scrolling-navbar intro-fixed-nav" [containerInside]="false">
+      <mdb-navbar-brand>
+        <a class="logo navbar-brand" href="#"><strong>Travel Advisor</strong></a>
+      </mdb-navbar-brand>
+        <links>
+          <ul class="navbar-nav mr-auto">
+
+          </ul>
+            <ul class="navbar-nav nav-flex-icons">
+              <li class="nav-item">
+                <a class="nav-link" href="#home">Home
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/aboutus" data-offset="90">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a routerLink="/plan" class="nav-link"  data-offset="90">Plan</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/contactus" data-offset="90">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/login" data-offset="90">Login/Signup</a>
+              </li>
+            </ul>
+        </links>
+  </mdb-navbar>
+              
+<br>
+<div class="container">
+    <div class="py-5 text-center">
+      <h2>Registration Form</h2>
+   </div>
+   <div class="row">
+    <div class="col-md-3 mb-3">
+      <label for="firstName">First name*</label>
+      <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+      <div class="invalid-feedback">
+        Valid first name is required.
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="lastName">Last name</label>
+      <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+      <div class="invalid-feedback">
+        Valid last name is required.
+      </div>
+    </div></div>
+  <div class ="row">
+    <div class="col-md-3 mb-2">
+      <label for="email">Email*</label>
+      <input type="email" class="form-control" id="email" placeholder="you@example.com">
+      <div class="invalid-feedback">
+        Please enter a valid email address.
+      </div>
+    </div>  
+   </div> 
+    <div class="row">
+        <div class="col-md-3 mb-3">
+          <label for="country">Country</label>
+          <select class="custom-select d-block w-100" id="country" required>
+            
+            <option>America</option>
+            <option>France</option>
+            <option>India</option>
+            <option>Italy</option>
+            <option>Japan</option>
+            <option>Russia</option>
+            <option>Other</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a valid country.
+          </div>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 md-3">
+        <label for="pass">Password (8 characters minimum)</label>
+        <input type="password" id="pass" name="password" minlength="8" required>
+    </div>
+    </div>
+    <br/>
+    <div class="row">
+      <div class="col-md-3 md-3">
+        <button routerLink="/home" class="btn btn-primary btn-lg btn-block">Signup</button>
+      </div>
+    </div>

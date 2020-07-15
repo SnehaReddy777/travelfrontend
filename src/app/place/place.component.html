@@ -1,0 +1,82 @@
+<header class="h-100">
+    <mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark indigo scrolling-navbar intro-fixed-nav" [containerInside]="false">
+        <mdb-navbar-brand>
+            <a class="logo navbar-brand" href="#"><strong>Travel Advisor</strong></a>
+        </mdb-navbar-brand>
+        <links>
+            <ul class="navbar-nav mr-auto">
+              
+            </ul>
+            
+            <ul class="navbar-nav nav-flex-icons">
+                <li class="nav-item">
+                      <a class="nav-link" href="#home">Home
+                          <span class="sr-only">(current)</span>
+                        </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/aboutus" data-offset="90">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a routerLink="/plan" class="nav-link"  data-offset="90">Plan</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/contactus" data-offset="90">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/login" data-offset="90">Login/Signup</a>
+                </li>
+              </ul>
+        </links>
+    </mdb-navbar>
+ 
+    <!-- /.Main -->
+</header>
+
+  <!--Main Layout-->
+<div class="container">
+    <div class="card">
+        <div class="container-fliud">
+            <div class="wrapper row">
+                <div class="preview col-md-6">
+                  <mdb-carousel [animation]="'slide'">
+                    <mdb-carousel-item *ngFor="let i of images">
+                      
+                    </mdb-carousel-item>
+                    
+                  </mdb-carousel>
+                  <img class="d-block w-100" src="assets/images/Goa.jpg" alt="First slide">
+                    
+                </div>
+                <div class="details col-md-6">
+                    <!-- <h3 [(ngModel)]="placename1" class="product-title">Goa</h3> -->
+                    <h3>Goa</h3>
+                    <div class="rating">
+                        <div class="stars">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <span class="review-no">41 reviews</span>
+                    </div>
+                    <p class="product-description">{{details.description}}</p>
+                    <p class="product-description">Best Time to Visit:{{details.besttimetovisit}}</p>
+                    <p class="product-description">How to Reach:{{details.howtoreach}}</p>
+                    <p class="product-description">Attractions:{{details.attractions}}</p>
+                    <p class="product-description">Average Temperature:{{details.averagetemperature}}</p>
+                    <p class="product-description">Country:{{details.country}}</p>
+                    <p class="product-description">State:{{details.state}}</p>
+                    <hr>
+                    <h4 class="price">current price:Rs.7000 </h4>
+                   
+                    <div class="action">
+                        <button class="add-to-cart btn btn-default" routerLink="/payment" type="button">Book Now</button>
+                        <button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

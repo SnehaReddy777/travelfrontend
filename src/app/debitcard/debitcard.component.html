@@ -1,0 +1,72 @@
+<app-header></app-header>
+<header class="h-100">
+    <mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark indigo scrolling-navbar intro-fixed-nav" [containerInside]="false">
+        <mdb-navbar-brand>
+          <a class="logo navbar-brand" href="#"><strong>Travel Advisor</strong></a>
+        </mdb-navbar-brand>
+          <links>
+            <ul class="navbar-nav mr-auto">
+  
+            </ul>
+              <ul class="navbar-nav nav-flex-icons">
+                <li class="nav-item">
+                  <a class="nav-link" href="#home">Home
+                    <span class="sr-only">(current)</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/aboutus" data-offset="90">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a routerLink="/plan" class="nav-link"  data-offset="90">Plan</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/contactus" data-offset="90">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/login" data-offset="90">Login/Signup</a>
+                </li>
+              </ul>
+          </links>
+    </mdb-navbar>
+  </header>
+  <br>
+  <br>
+  <div class="container">
+    <div class="py-5 text-center">
+        <h2>Payment</h2>
+    </div>
+    <div class="col-md-4 order-md-2 mb-4">
+<label for="cc-name">Name on card</label>&nbsp;
+<small class="text-muted">(Full name as displayed on card)</small>
+             <input type="text" class="form-control" id="cc-name" placeholder="" required/>
+             
+             <div class="invalid-feedback">
+                 Name on card is required
+             </div>
+        
+             <label for="cc-number">Debit card number</label>
+             <input type="text" class="form-control" id="cc-number" placeholder="" required/>
+             <div class="invalid-feedback">
+                 Credit card number is required
+             </div>
+        
+    
+    
+             <label for="cc-expiration">Expiration</label>
+             <input type="text" class="form-control" id="cc-expiration" placeholder="" required/>
+             <div class="invalid-feedback">
+                 Expiration date required
+             </div>
+        
+        
+             <label for="cc-cvv">CVV</label>
+             <input type="text" class="form-control" id="cc-cvv" placeholder="" required/>
+             <div class="invalid-feedback">
+                Security code required
+             </div>
+             </div>
+             <br>
+    <button routerLink="/home" class="btn btn-primary btn-lg btn-block">Submit</button>
+    
+    </div>

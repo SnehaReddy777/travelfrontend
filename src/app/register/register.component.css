@@ -1,0 +1,21 @@
+.our-webcoderskull{
+    background: url("http://www.webcoderskull.com/img/right-sider-banner.png") no-repeat center top / cover;
+}
+#contact .card:hover i,#contact .card:hover h4{
+	color: #87d37c;
+}
+.row.heading h2 {
+    color: #fff;
+    font-size: 52.52px;
+    line-height: 95px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0 0 40px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+  }
+  .our-webcoderskull .cnt-block img{ 
+    width:250px; 
+    height:250px; 
+    border-radius:100%; 
+   }

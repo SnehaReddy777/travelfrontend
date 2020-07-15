@@ -1,0 +1,85 @@
+<app-header></app-header>
+<div id="intro-section" class="view" style="background-image: url('http://mdbootstrap.com/img/Photos/Others/images/91.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+  
+    <!-- <video class="video-intro" poster="https://mdbootstrap.com/img/Photos/Others/background.jpg" playsinline autoplay
+      muted loop>
+      <source src="https://mdbootstrap.com/img/video/animation.mp4" type="video/mp4">
+    </video> -->
+
+    <!-- Mask & flexbox options-->
+    <div class="mask rgba-gradient d-flex justify-content-center align-items-center">
+
+      <!-- Content -->
+      <div class="container">
+
+        <!--Grid row-->
+        <div class="row pt-lg-5 mt-lg-5">
+            <!--Grid column-->
+            <div class="col-md-4 mb-4 mt-md-0 mt-5 white-text text-center" data-wow-delay="0.3s">
+             
+            </div>
+       
+           <!-- Form -->
+           <div class="col-md-4 col-xl-5 mb-4">
+            <!--Form-->
+            <mdb-card class="wow fadeInRight" data-wow-delay="0.3s">
+              <mdb-card-body class="z-depth-2">
+                <div class="text-center">
+                    <h3 class="dark-grey-text">
+                      <strong>Plan your trip</strong>
+                    </h3>
+                    <hr>
+                  </div>
+
+                
+               
+           <form class="text-center">
+         
+              <div class="mb-3">
+                <label for="firstName">Source </label>
+                <input type="text" class="form-control" id="source" placeholder="Enter Source place" value="" required>
+                <div class="invalid-feedback">
+                  Valid source is required.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="lastName">Destination</label>
+                <input type="text" class="form-control" id="destination" placeholder="Enter Destination place" value="" required>
+                <div class="invalid-feedback">
+                  Valid destination is required.
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="start">Start Date</label>
+                  <input type="date" class="form-control" id="start" min="2020-07-01" max="2023-12-31" placeholder="" value="" required>
+                  <div class="invalid-feedback">
+                    Valid Date is required.
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="end">End date</label>
+                  <input type="date" class="form-control" id="end" min="2020-07-01" max="2023-12-31" placeholder="" value="" required>
+                  <div class="invalid-feedback">
+                    Valid Date is required.
+                  </div>
+                </div>
+              </div>
+           
+            <!-- Sign in button -->
+            <button routerLink="/book" mdbBtn color="info" block="true" class="my-4" type="submit">Start Planning</button>
+          
+          </form>
+     
+   
+</mdb-card-body>
+</mdb-card>
+</div>
+        </div>
+          <!--Grid column-->
+
+     </div>
+    </div>
+    <!-- Mask & flexbox options-->
+
+  </div>

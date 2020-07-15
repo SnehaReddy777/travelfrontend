@@ -1,0 +1,91 @@
+
+<app-header></app-header>
+    
+    <!-- Full Page Intro -->
+    <div id="intro-section" class="view" style="background-image: url('http://mdbootstrap.com/img/Photos/Others/images/91.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+  
+      <!-- <video class="video-intro" poster="https://mdbootstrap.com/img/Photos/Others/background.jpg" playsinline autoplay
+        muted loop>
+        <source src="https://mdbootstrap.com/img/video/animation.mp4" type="video/mp4">
+      </video> -->
+  
+      <!-- Mask & flexbox options-->
+      <div class="mask rgba-gradient d-flex justify-content-center align-items-center">
+  
+        <!-- Content -->
+        <div class="px-md-3 px-sm-0">
+  
+          <!--Grid row-->
+          <div class="row wow fadeIn">
+  
+            <!--Grid column-->
+            <div class="col-md-12 mb-4 white-text text-center wow fadeIn">
+  
+              <h3 class="display-4 font font-weight-bold white-text mb-0 mt-5 pt-md-5 pt-5">Explore the city</h3>
+              <hr class="hr-light my-4 w-75">
+              <h4 class="subtext-header mt-3 mb-4">Discover Great Place</h4>
+              <a routerLink="/plan" mdbBtn color="white" rounded="true" outline="true" mdbWavesEffect>
+               Plan Trip
+              </a>
+              <!-- <a href="#topplaces" mdbBtn color="white" rounded="true" outline="true" mdbWavesEffect>
+                Top Places
+               </a> -->
+  
+            </div>
+            <!--Grid column-->
+  
+          </div>
+          <!--Grid row-->
+  
+        </div>
+        <!-- Content -->
+  
+      </div>
+      <!-- Mask & flexbox options-->
+  
+    </div>
+    <!-- Full Page Intro -->
+  
+
+  <!-- Main navigation -->
+  <div>
+    <h3 id="topplaces"class="display-4 font font-weight-bold text-center mb-0 mt-5">Top Place to Visit in India</h3>
+  </div>
+ <section class=" pb-3 my-4">
+    <div class="container">
+      <!--Card-->
+      <mdb-card dark="true" class="align-items-center" *ngFor="let place of places">
+  
+        <!--Card image-->
+        <div *ngFor="let i of images">
+        <div class="view overlay waves-light" mdbWavesEffect *ngIf="i.name == place.placename">
+          <mdb-card-img src="{{i.imageurl}}"></mdb-card-img>
+          <a (click)=getplacename(place.id)>
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+        </div>
+        <!--/.Card image-->
+  
+        <!--Card content-->
+        <mdb-card-body class="elegant-color white-text">
+        <!--Title-->
+          <mdb-card-title>
+            <h4>{{place.placename}}</h4>
+          </mdb-card-title>
+  
+          <hr class="hr-light">
+  
+          <!--Text-->
+  
+          <mdb-card-text class="white-text">
+            {{place.attractions}}
+          </mdb-card-text>
+  
+    
+        </mdb-card-body>
+        <!--/.Card content-->
+      </mdb-card>
+      <!--/.Card-->
+    </div>
+ </section>
